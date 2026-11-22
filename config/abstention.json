@@ -1,0 +1,6 @@
+{
+  "ocr_tau": 0.5,
+  "vlm_tau": 0.5,
+  "aggregate_tau_low": 0.5,
+  "aggregate_tau_high": 0.7
+}

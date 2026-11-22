@@ -1,0 +1,11 @@
+# Light set for CI and the demo: no torch, no audio hardware.
+numpy>=1.26
+opencv-python-headless>=4.9
+requests>=2.31
+python-dotenv>=1.0
+flask>=3.0
+deep-translator>=1.11
+jiwer==3.0.5
+pytest>=8
+pytest-cov>=5
+ruff>=0.5

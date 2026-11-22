@@ -1,0 +1,218 @@
+# Golden pairs for visionassist.hinglish.to_hinglish. Format: Devanagari<TAB>expected Hinglish.
+# The expected side was written by hand from everyday Hinglish spelling, NOT copied from the program's
+# output. Conventions: ड़->d, ढ़->dh, final ी->i, medial ी->ee, ें->ein, व->v (irregular words are
+# in the fixed dictionary), English loanwords stay English, sentence starts are capitalised.
+# --- everyday sentences the assistant says
+सामने एक व्यक्ति है।	Saamne ek person hai.
+आपके बाईं ओर कुर्सी है।	Aapke baayin taraf chair hai.
+आपके दाईं ओर दरवाज़ा है।	Aapke daayin taraf darwaza hai.
+रास्ता साफ़ नहीं दिख रहा।	Raasta saaf nahi dikh raha.
+सामने रुकावट है।	Saamne rukaawat hai.
+कोई टेक्स्ट नहीं मिला।	Koi text nahi mila.
+कैमरा थोड़ा पास करो।	Camera thoda paas karo.
+मुझे ठीक से दिख नहीं रहा।	Mujhe theek se dikh nahi raha.
+असिस्टेंट तैयार है।	Assistant taiyaar hai.
+पढ़ना शुरू करो।	Padhna shuru karo.
+बहुत पास एक व्यक्ति है।	Bahut paas ek person hai.
+दूर एक कुर्सी है।	Door ek chair hai.
+अभी कुछ नहीं दिख रहा।	Abhi kuchh nahi dikh raha.
+यह एक दवाई है।	Yeh ek dawaai hai.
+वह दुकान बंद है।	Woh dukaan band hai.
+मेज़ पर किताब रखी है।	Table par kitaab rakhi hai.
+कमरे में कोई नहीं है।	Kamre mein koi nahi hai.
+दरवाज़ा खुला है।	Darwaza khula hai.
+सीन बदल गया है।	Scene badal gaya hai.
+मैं देख रहा हूँ।	Main dekh raha hoon.
+कृपया दोबारा कोशिश करें।	Please dobaara koshish karein.
+थोड़ा और बताओ।	Thoda aur bataao.
+कुछ पढ़ो।	Kuchh padho.
+बड़ा कमरा है।	Bada kamra hai.
+छोटा सा कमरा।	Chhota sa kamra.
+अच्छा है।	Achha hai.
+ठीक है।	Theek hai.
+सब कुछ साफ़ है।	Sab kuchh saaf hai.
+यहाँ से सीधा जाओ।	Yahan se seedha jaao.
+आगे बढ़ो।	Aage badho.
+रुको।	Ruko.
+धीरे चलो।	Dheere chalo.
+जल्दी आओ।	Jaldi aao.
+पीछे हटो।	Peechhe hato.
+ऊपर सीढ़ियाँ हैं।	Upar seedhiyan hain.
+नीचे सड़क है।	Neeche sadak hai.
+बाहर बारिश हो रही है।	Baahar baarish ho rahi hai.
+अंदर अँधेरा है।	Andar andhera hai.
+रोशनी कम है।	Roshni kam hai.
+पानी गिरा हुआ है।	Paani gira hua hai.
+# --- directions and distance
+बाएँ मुड़ो।	Baayein mudo.
+दाएँ मुड़ो।	Daayein mudo.
+सीधा चलो।	Seedha chalo.
+थोड़ा दाईं ओर।	Thoda daayin taraf.
+बाईं ओर पास में।	Baayin taraf paas mein.
+दो कदम आगे।	Do kadam aage.
+तीन मीटर दूर।	Teen meter door.
+पाँच मिनट में।	Paanch minute mein.
+सौ मीटर आगे।	Sau meter aage.
+बहुत दूर नहीं है।	Bahut door nahi hai.
+सामने दीवार है।	Saamne deevaar hai.
+पीछे कोई है।	Peechhe koi hai.
+दोनों तरफ़ रास्ता है।	Donon taraf raasta hai.
+बीच में खंभा है।	Beech mein khambha hai.
+कोने में मेज़ है।	Kone mein table hai.
+ऊपर पंखा है।	Upar pankha hai.
+नीचे गड्ढा है।	Neeche gaddha hai.
+किनारे पर बैठो।	Kinaare par baitho.
+आसपास कोई नहीं।	Aaspaas koi nahi.
+सामने से गाड़ी आ रही है।	Saamne se gaadi aa rahi hai.
+# --- scene descriptions
+एक आदमी खड़ा है।	Ek aadmi khada hai.
+एक औरत बैठी है।	Ek aurat baithi hai.
+बच्चा खेल रहा है।	Bachcha khel raha hai.
+कुत्ता भौंक रहा है।	Kutta bhaunk raha hai.
+बिल्ली सो रही है।	Billi so rahi hai.
+गाय सड़क पर है।	Gaay sadak par hai.
+बस रुकी हुई है।	Bus ruki hui hai.
+दो लोग बात कर रहे हैं।	Do log baat kar rahe hain.
+मेज़ पर चाय रखी है।	Table par chaay rakhi hai.
+दीवार पर घड़ी लगी है।	Deevaar par ghadi lagi hai.
+खिड़की खुली है।	Khidki khuli hai.
+कमरे में बिस्तर है।	Kamre mein bed hai.
+रसोई में कोई है।	Rasoi mein koi hai.
+सड़क पर भीड़ है।	Sadak par bheed hai.
+दुकान के बाहर कतार है।	Dukaan ke baahar qatar hai.
+सामने सीढ़ियाँ हैं।	Saamne seedhiyan hain.
+फर्श गीला है।	Farsh geela hai.
+रास्ते में पत्थर है।	Raaste mein patthar hai.
+एक साइकिल खड़ी है।	Ek cycle khadi hai.
+पेड़ के नीचे बेंच है।	Ped ke neeche bench hai.
+# --- signboards and notices (Devanagari text a user may point the camera at)
+प्रवेश निषेध	Pravesh nishedh
+निकास	Nikaas
+धूम्रपान वर्जित है	Dhoomrapaan varjit hai
+शौचालय	Toilet
+पुरुष	Purush
+महिला	Mahila
+सावधान	Saavdhaan
+खतरा	Khatra
+आगे काम चल रहा है	Aage kaam chal raha hai
+स्टेशन	Station
+टिकट घर	Ticket ghar
+पूछताछ	Poochhtaachh
+आपातकालीन निकास	Aapaatkaaleen nikaas
+भारत सरकार	Bhaarat sarkaar
+राजमार्ग	Raajmaarg
+बस अड्डा	Bus adda
+दवाखाना	Dawaakhaana
+अस्पताल	Aspataal
+डाकघर	Daakghar
+पुस्तकालय	Pustakaalay
+बैंक	Bank
+मिठाई की दुकान	Mithaai ki dukaan
+किराना स्टोर	Kiraana store
+सब्ज़ी मंडी	Sabzi mandi
+गर्म चाय	Garm chaay
+ठंडा पानी	Thanda paani
+शुद्ध घी	Shuddh ghee
+नया स्टॉक	Naya stock
+सेल	Sale
+बंद है	Band hai
+खुला है	Khula hai
+कृपया शांति रखें	Please shaanti rakhein
+जूते बाहर उतारें	Joote baahar utaarein
+धक्का दें	Dhakka dein
+खींचें	Kheenchein
+लाइन में लगें	Line mein lagein
+पार्किंग	Parking
+लिफ्ट	Lift
+पहली मंज़िल	Pehli manzil
+# --- menus and prices
+पनीर टिक्का	Paneer tikka
+दाल मखनी	Daal makhni
+बटर नान	Butter naan
+आलू पराठा	Aalu paraatha
+मसाला डोसा	Masaala dosa
+चाय	Chaay
+कॉफ़ी	Coffee
+लस्सी	Lassi
+गुलाब जामुन	Gulaab jaamun
+समोसा	Samosa
+इडली सांभर	Idli saambhar
+छोले भटूरे	Chhole bhatoore
+पाव भाजी	Paav bhaaji
+थाली	Thaali
+रोटी	Roti
+चावल	Chaaval
+सलाद	Salad
+रायता	Raita
+क़ीमत ८० रुपये	Keemat 80 rupaye
+कुल १२० रुपये	Kul 120 rupaye
+आज का स्पेशल	Aaj ka special
+# --- medicine labels
+दिन में दो बार	Din mein do baar
+खाने के बाद	Khaane ke baad
+खाली पेट	Khaali pet
+सुबह शाम	Subah shaam
+बच्चों की पहुँच से दूर रखें	Bachchon ki pahunch se door rakhein
+ठंडी और सूखी जगह पर रखें	Thandi aur sookhi jagah par rakhein
+एक्सपायरी तारीख	Expiry taareekh
+पैरासिटामोल ५०० मिलीग्राम	Pairaasitaamol 500 milligram
+हर छह घंटे में	Har chhah ghante mein
+डॉक्टर की सलाह से लें	Doctor ki salaah se lein
+# --- numbers, time and mixed script
+आज ३ तारीख है	Aaj 3 taareekh hai
+कमरा नंबर १०५	Kamra number 105
+सुबह ९ बजे	Subah 9 baje
+मंज़िल २	Manzil 2
+Room 4 में जाओ	Room 4 mein jaao
+WiFi चालू है	WiFi chaalu hai
+OK है	OK hai
+बस नंबर ४२	Bus number 42
+रेट ₹५०	Rate ₹50
+# --- punctuation and capitalisation
+सब ठीक है। आगे बढ़ो।	Sab theek hai. Aage badho.
+क्या यह सही है?	Kya yeh sahi hai?
+रुको! सामने गाड़ी है।	Ruko! Saamne gaadi hai.
+जी, बताइए।	Ji, bataaiye.
+# --- conjuncts, nukta and harder words
+स्वागत है	Svaagat hai
+क्षमा करें	Kshama karein
+ज्ञान केंद्र	Gyaan kendr
+विद्यालय	Vidyaalay
+श्रीमान	Shreemaan
+सुरक्षित रास्ता	Surakshit raasta
+चेतावनी	Chetaavni
+सावधानी से चलें	Saavdhaani se chalein
+प्रतिदिन	Pratidin
+उपयोग से पहले हिलाएँ	Upyog se pehle hilaayein
+कृपया प्रतीक्षा करें	Please intezaar karein
+धन्यवाद	Dhanyavaad
+नमस्ते	Namaste
+शुभ प्रभात	Shubh prabhaat
+रात	Raat
+सूरज	Sooraj
+बारिश	Baarish
+गर्मी	Garmi
+सर्दी	Sardi
+हवा	Hava
+आग	Aag
+सावधान आग	Saavdhaan aag
+बिजली का खतरा	Bijli ka khatra
+तेज़ गाड़ियाँ	Tez gaadiyan
+धीमी गति	Dheemi gati
+एकतरफ़ा रास्ता	Ektarfa raasta
+रेलवे स्टेशन	Railway station
+प्लेटफ़ॉर्म नंबर ३	Platform number 3
+कृपया लाइन में रहें	Please line mein rahein
+बच्चों के लिए	Bachchon ke liye
+सिर्फ़ महिलाओं के लिए	Sirf mahilaaon ke liye
+कृपया पैसे गिन लें	Please paise gin lein
+खुले पैसे दें	Khule paise dein
+आज बंद है	Aaj band hai
+कल खुलेगा	Kal khulega
+सोमवार से शनिवार	Somvaar se shanivaar
+रविवार को छुट्टी	Ravivaar ko chhutti
+सुबह दस बजे	Subah das baje
+दोपहर एक बजे	Dopahar ek baje
+शाम पाँच बजे	Shaam paanch baje
+रात आठ बजे तक	Raat aath baje tak
+पहचान पत्र दिखाएँ	Pehchaan patr dikhaayein

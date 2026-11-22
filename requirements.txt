@@ -1,0 +1,13 @@
+# Runtime dependencies. Install: pip install -r requirements.txt
+numpy>=1.26
+opencv-python>=4.9
+requests>=2.31
+python-dotenv>=1.0
+flask>=3.0
+deep-translator>=1.11
+waitress>=3.0            # production web server for the dashboard
+ultralytics>=8.3         # YOLOv8 (pulls in torch)
+piper-tts>=1.2           # offline English + Hindi speech
+vosk>=0.3.45             # offline voice commands
+sounddevice>=0.4.6       # microphone access
+jiwer==3.0.5             # evaluation: CER / WER (eval/ falls back to a built-in implementation if absent)

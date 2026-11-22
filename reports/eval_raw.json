@@ -1,0 +1,6128 @@
+{
+ "meta": {
+  "date": "2026-11-22 12:53 UTC+0530",
+  "commit": "n/a (not a git checkout)",
+  "host": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel (12 cores), GPU: NVIDIA GeForce RTX 2050, Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "opencv": "5.1.0",
+  "backend": "auto",
+  "models": {
+   "detector": "demo colour-blob model (not YOLO)",
+   "vlm": "deterministic template over detections (not a language model)",
+   "asr": "not exercised (typed / simulated transcripts; no audio, no Vosk)",
+   "ocr": "scripted fake (tesseract not installed)"
+  },
+  "judge": "keyword-overlap judge (deterministic)",
+  "abstention": {
+   "ocr_tau": 0.5,
+   "vlm_tau": 0.4,
+   "aggregate_tau_low": 0.45,
+   "aggregate_tau_high": 0.7,
+   "enabled": true
+  }
+ },
+ "records": [
+  {
+   "id": "ocr_medicine_001",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1024.197,
+     "contrast": 35.326,
+     "brightness": 230.477,
+     "confidence": 1.0
+    },
+    "raw_text": "Paracetamol 500mg",
+    "intent": "read"
+   },
+   "latency_ms": 9.72,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Paracetamol 500mg",
+   "display_text": "Paracetamol 500mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 7.88,
+    "ocr": 1.2
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_002",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 911.298,
+     "contrast": 33.903,
+     "brightness": 230.906,
+     "confidence": 1.0
+    },
+    "raw_text": "Azithromycin 250mg",
+    "intent": "read"
+   },
+   "latency_ms": 3.04,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Azithromycin 250mg",
+   "display_text": "Azithromycin 250mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.56,
+    "ocr": 1.23
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_003",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1784.569,
+     "contrast": 26.205,
+     "brightness": 233.002,
+     "confidence": 1.0
+    },
+    "raw_text": "Take 1 tablet twice daily after meals",
+    "intent": "read"
+   },
+   "latency_ms": 3.72,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Take 1 tablet twice daily after meals",
+   "display_text": "Take 1 tablet twice daily after meals",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.15,
+    "ocr": 1.19
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_004",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 2050.704,
+     "contrast": 28.226,
+     "brightness": 232.36,
+     "confidence": 1.0
+    },
+    "raw_text": "Store below 25C. Keep away from children.",
+    "intent": "read"
+   },
+   "latency_ms": 3.39,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Store below 25C. Keep away from children.",
+   "display_text": "Store below 25C. Keep away from children.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.68,
+    "ocr": 1.37
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_005",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 96.998,
+     "contrast": 10.557,
+     "brightness": 217.306,
+     "confidence": 1.0
+    },
+    "raw_text": "Cetirizine 10mg",
+    "intent": "read"
+   },
+   "latency_ms": 3.1,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Cetirizine 10mg",
+   "display_text": "Cetirizine 10mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.71,
+    "ocr": 1.18
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_006",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 780.966,
+     "contrast": 35.079,
+     "brightness": 230.473,
+     "confidence": 1.0
+    },
+    "raw_text": "Metformin 500mg",
+    "intent": "read"
+   },
+   "latency_ms": 4.06,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Metformin 500mg",
+   "display_text": "Metformin 500mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.43,
+    "ocr": 1.4
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_007",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 839.244,
+     "contrast": 33.645,
+     "brightness": 230.969,
+     "confidence": 1.0
+    },
+    "raw_text": "Amoxicillin 500mg",
+    "intent": "read"
+   },
+   "latency_ms": 4.29,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Amoxicillin 500mg",
+   "display_text": "Amoxicillin 500mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.49,
+    "ocr": 1.54
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_008",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 2074.156,
+     "contrast": 115.911,
+     "brightness": 133.479,
+     "confidence": 1.0
+    },
+    "raw_text": "Ibuprofen 400mg",
+    "intent": "read"
+   },
+   "latency_ms": 3.05,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Ibuprofen 400mg",
+   "display_text": "Ibuprofen 400mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.66,
+    "ocr": 1.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_009",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 198.18,
+     "contrast": 11.492,
+     "brightness": 214.443,
+     "confidence": 1.0
+    },
+    "raw_text": "Omeprazole 20mg",
+    "intent": "read"
+   },
+   "latency_ms": 2.86,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Omeprazole 20mg",
+   "display_text": "Omeprazole 20mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.57,
+    "ocr": 1.13
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_010",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 909.29,
+     "contrast": 23.943,
+     "brightness": 233.797,
+     "confidence": 1.0
+    },
+    "raw_text": "Dolo 650 Tablets IP",
+    "intent": "read"
+   },
+   "latency_ms": 4.09,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Dolo 650 Tablets IP",
+   "display_text": "Dolo 650 Tablets IP",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.71,
+    "ocr": 1.13
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_011",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 615.377,
+     "contrast": 11.461,
+     "brightness": 236.109,
+     "confidence": 1.0
+    },
+    "raw_text": "Vitamin D3 60000 IU",
+    "intent": "read"
+   },
+   "latency_ms": 2.99,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Vitamin D3 60000 IU",
+   "display_text": "Vitamin D3 60000 IU",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.6,
+    "ocr": 1.19
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_medicine_012",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1309.112,
+     "contrast": 31.924,
+     "brightness": 231.54,
+     "confidence": 1.0
+    },
+    "raw_text": "Crocin Advance 500mg",
+    "intent": "read"
+   },
+   "latency_ms": 3.22,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Crocin Advance 500mg",
+   "display_text": "Crocin Advance 500mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.79,
+    "ocr": 1.24
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_001",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 320.271,
+     "contrast": 23.07,
+     "brightness": 86.433,
+     "confidence": 1.0
+    },
+    "raw_text": "MG ROAD",
+    "intent": "read"
+   },
+   "latency_ms": 3.77,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "MG ROAD",
+   "display_text": "MG ROAD",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.22,
+    "ocr": 1.36
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_002",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 625.849,
+     "contrast": 31.466,
+     "brightness": 57.438,
+     "confidence": 1.0
+    },
+    "raw_text": "NO PARKING",
+    "intent": "read"
+   },
+   "latency_ms": 2.97,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "NO PARKING",
+   "display_text": "NO PARKING",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.66,
+    "ocr": 1.15
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_003",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 673.165,
+     "contrast": 25.623,
+     "brightness": 230.703,
+     "confidence": 1.0
+    },
+    "raw_text": "Sharma Medical Store",
+    "intent": "read"
+   },
+   "latency_ms": 2.89,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Sharma Medical Store",
+   "display_text": "Sharma Medical Store",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.57,
+    "ocr": 1.14
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_004",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 638.84,
+     "contrast": 30.572,
+     "brightness": 191.03,
+     "confidence": 1.0
+    },
+    "raw_text": "Bus 512 to Andheri",
+    "intent": "read"
+   },
+   "latency_ms": 3.54,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Bus 512 to Andheri",
+   "display_text": "Bus 512 to Andheri",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.85,
+    "ocr": 1.41
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_005",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 238.902,
+     "contrast": 25.43,
+     "brightness": 85.044,
+     "confidence": 1.0
+    },
+    "raw_text": "EXIT",
+    "intent": "read"
+   },
+   "latency_ms": 2.99,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "EXIT",
+   "display_text": "EXIT",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.71,
+    "ocr": 1.12
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_006",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 573.872,
+     "contrast": 30.488,
+     "brightness": 57.069,
+     "confidence": 1.0
+    },
+    "raw_text": "Platform 3",
+    "intent": "read"
+   },
+   "latency_ms": 2.95,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Platform 3",
+   "display_text": "Platform 3",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.68,
+    "ocr": 1.12
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_007",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 57.902,
+     "contrast": 24.51,
+     "brightness": 73.017,
+     "confidence": 1.0
+    },
+    "raw_text": "STATE BANK OF INDIA",
+    "intent": "read"
+   },
+   "latency_ms": 4.76,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "STATE BANK OF INDIA",
+   "display_text": "STATE BANK OF INDIA",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.43,
+    "ocr": 2.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_008",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 300.617,
+     "contrast": 14.274,
+     "brightness": 35.732,
+     "confidence": 1.0
+    },
+    "raw_text": "HOTEL SUNRISE",
+    "intent": "read"
+   },
+   "latency_ms": 3.02,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "HOTEL SUNRISE",
+   "display_text": "HOTEL SUNRISE",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.68,
+    "ocr": 1.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_009",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 299.725,
+     "contrast": 19.88,
+     "brightness": 27.889,
+     "confidence": 0.883
+    },
+    "raw_text": "Bus 21A",
+    "intent": "read"
+   },
+   "latency_ms": 2.94,
+   "confidence": {
+    "ocr": 0.883
+   },
+   "answer_text": "Bus 21A",
+   "display_text": "Bus 21A",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 1.68,
+    "ocr": 1.11
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.8827061631944445,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.8827061631944445,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_010",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 545.697,
+     "contrast": 27.74,
+     "brightness": 99.442,
+     "confidence": 1.0
+    },
+    "raw_text": "Pharmacy 24 Hours",
+    "intent": "read"
+   },
+   "latency_ms": 3.29,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Pharmacy 24 Hours",
+   "display_text": "Pharmacy 24 Hours",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 1.92,
+    "ocr": 1.12
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_011",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 444.435,
+     "contrast": 30.71,
+     "brightness": 67.337,
+     "confidence": 1.0
+    },
+    "raw_text": "Keep Left",
+    "intent": "read"
+   },
+   "latency_ms": 3.09,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Keep Left",
+   "display_text": "Keep Left",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.78,
+    "ocr": 1.14
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_sign_012",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 629.022,
+     "contrast": 30.092,
+     "brightness": 89.054,
+     "confidence": 1.0
+    },
+    "raw_text": "Gandhi Chowk 200 m",
+    "intent": "read"
+   },
+   "latency_ms": 3.64,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Gandhi Chowk 200 m",
+   "display_text": "Gandhi Chowk 200 m",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.19,
+    "ocr": 1.23
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_001",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 3088.926,
+     "contrast": 30.401,
+     "brightness": 238.655,
+     "confidence": 1.0
+    },
+    "raw_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+    "intent": "read"
+   },
+   "latency_ms": 3.82,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+   "display_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.29,
+    "ocr": 1.26
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_002",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1772.948,
+     "contrast": 23.847,
+     "brightness": 240.684,
+     "confidence": 1.0
+    },
+    "raw_text": "Masala Dosa 90 Idli Sambar 60",
+    "intent": "read"
+   },
+   "latency_ms": 2.93,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Masala Dosa 90 Idli Sambar 60",
+   "display_text": "Masala Dosa 90 Idli Sambar 60",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.64,
+    "ocr": 1.1
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_003",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 861.091,
+     "contrast": 19.669,
+     "brightness": 241.587,
+     "confidence": 1.0
+    },
+    "raw_text": "Chai 15 Samosa 20",
+    "intent": "read"
+   },
+   "latency_ms": 2.99,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Chai 15 Samosa 20",
+   "display_text": "Chai 15 Samosa 20",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.67,
+    "ocr": 1.13
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_004",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 2388.792,
+     "contrast": 23.398,
+     "brightness": 240.69,
+     "confidence": 1.0
+    },
+    "raw_text": "Veg Biryani Plain Dosa Chicken Biryani Egg Curry",
+    "intent": "read"
+   },
+   "latency_ms": 3.9,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Veg Biryani Plain Dosa Chicken Biryani Egg Curry",
+   "display_text": "Veg Biryani Plain Dosa Chicken Biryani Egg Curry",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.47,
+    "ocr": 1.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_005",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 182.686,
+     "contrast": 7.767,
+     "brightness": 216.104,
+     "confidence": 0.953
+    },
+    "raw_text": "Pav Bhaji 120 Lassi 50",
+    "intent": "read"
+   },
+   "latency_ms": 2.94,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Pav Bhaji 120 Lassi 50",
+   "display_text": "Pav Bhaji 120 Lassi 50",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.62,
+    "ocr": 1.15
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.9534011319668176,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_006",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 3106.734,
+     "contrast": 31.098,
+     "brightness": 238.412,
+     "confidence": 1.0
+    },
+    "raw_text": "Chole Bhature 110 Rajma Chawal 100 Gulab Jamun 40",
+    "intent": "read"
+   },
+   "latency_ms": 2.93,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Chole Bhature 110 Rajma Chawal 100 Gulab Jamun 40",
+   "display_text": "Chole Bhature 110 Rajma Chawal 100 Gulab Jamun 40",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.59,
+    "ocr": 1.12
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_007",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 868.111,
+     "contrast": 20.015,
+     "brightness": 241.528,
+     "confidence": 1.0
+    },
+    "raw_text": "Special: Kadhi 80",
+    "intent": "read"
+   },
+   "latency_ms": 4.28,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Special: Kadhi 80",
+   "display_text": "Special: Kadhi 80",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.88,
+    "ocr": 1.19
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ocr_menu_008",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 527.314,
+     "contrast": 14.399,
+     "brightness": 242.504,
+     "confidence": 1.0
+    },
+    "raw_text": "Thali Rs 150",
+    "intent": "read"
+   },
+   "latency_ms": 2.96,
+   "confidence": {
+    "ocr": 0.95
+   },
+   "answer_text": "Thali Rs 150",
+   "display_text": "Thali Rs 150",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.64,
+    "ocr": 1.13
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.95,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_001",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 63.54,
+     "contrast": 18.485,
+     "brightness": 59.36,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 27.07,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.64,
+    "detect": 25.09,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_002",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 63.752,
+     "contrast": 18.481,
+     "brightness": 59.364,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "L",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "बाईं ओर एक व्यक्ति है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, aapke baayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.1,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा बाईं ओर एक व्यक्ति है।",
+   "display_text": "Raasta saaf nahi dikh raha | Baayin taraf ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.85,
+    "detect": 21.94,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_003",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 64.095,
+     "contrast": 18.476,
+     "brightness": 59.366,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "R",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "दाईं ओर एक व्यक्ति है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 27.89,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा दाईं ओर एक व्यक्ति है।",
+   "display_text": "Raasta saaf nahi dikh raha | Daayin taraf ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.84,
+    "detect": 25.73,
+    "vlm": 0.05
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_004",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.285,
+     "contrast": 10.855,
+     "brightness": 56.14,
+     "confidence": 1.0
+    },
+    "detections": {
+     "chair": {
+      "conf": 0.84,
+      "zone": "C",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Chair, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 22.66,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा सामने एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Saamne ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.17,
+    "quality": 1.8,
+    "detect": 20.42,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_005",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.921,
+     "contrast": 10.853,
+     "brightness": 56.142,
+     "confidence": 1.0
+    },
+    "detections": {
+     "chair": {
+      "conf": 0.84,
+      "zone": "R",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "दाईं ओर एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Chair, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.97,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा दाईं ओर एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Daayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.73,
+    "detect": 22.89,
+    "vlm": 0.05
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_006",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 66.908,
+     "contrast": 19.724,
+     "brightness": 61.15,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "L",
+      "prox": "mid"
+     },
+     "chair": {
+      "conf": 0.84,
+      "zone": "R",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "बाईं ओर एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Person, paas, aapke baayin taraf",
+     "Chair, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.63,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा बाईं ओर एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Baayin taraf ek person hai; daayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.04,
+    "quality": 2.77,
+    "detect": 21.54,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_007",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 71.504,
+     "contrast": 23.997,
+     "brightness": 64.922,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "near"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, bahut paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 26.14,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.17,
+    "quality": 2.59,
+    "detect": 22.98,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "partially_correct",
+    "verdict": "partial"
+   },
+   "failure_bucket": "vlm_hallucination"
+  },
+  {
+   "id": "scene_description_008",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 35.639,
+     "contrast": 13.775,
+     "brightness": 58.554,
+     "confidence": 1.0
+    },
+    "detections": {
+     "chair": {
+      "conf": 0.84,
+      "zone": "C",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक कुर्सी है।",
+     "obstacles": [
+      "सामने एक कुर्सी"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Chair, paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 26.7,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "सामने रुकावट है सामने एक कुर्सी सामने एक कुर्सी है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek chair | Saamne ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.15,
+    "detect": 24.2,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_009",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 27.825,
+     "contrast": 7.207,
+     "brightness": 54.355,
+     "confidence": 0.841
+    },
+    "detections": {},
+    "vlm": {
+     "summary": "कोई ख़ास चीज़ नहीं दिखी।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.6
+    },
+    "detections_spoken": [],
+    "intent": "describe"
+   },
+   "latency_ms": 23.17,
+   "confidence": {
+    "image": 0.841,
+    "vlm": 0.6
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा कोई ख़ास चीज़ नहीं दिखी।",
+   "display_text": "Raasta saaf nahi dikh raha | Koi khaas cheez nahi dikhi.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.7,
+    "detect": 21.18,
+    "vlm": 0.02
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 0.8413811416060654,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 0.8413811416060654,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.6,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_010",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 72.855,
+     "contrast": 22.089,
+     "brightness": 63.413,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "L",
+      "prox": "mid"
+     },
+     "chair": {
+      "conf": 0.84,
+      "zone": "R",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "बाईं ओर एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Person, paas, aapke baayin taraf",
+     "Chair, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 22.67,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा बाईं ओर एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Baayin taraf ek person hai; daayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.66,
+    "detect": 20.69,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_011",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 100.104,
+     "contrast": 24.097,
+     "brightness": 64.371,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "near"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, bahut paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.77,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.79,
+    "detect": 22.69,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "partially_correct",
+    "verdict": "partial"
+   },
+   "failure_bucket": "detection_miss"
+  },
+  {
+   "id": "scene_description_012",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 36.034,
+     "contrast": 15.169,
+     "brightness": 59.72,
+     "confidence": 1.0
+    },
+    "detections": {
+     "chair": {
+      "conf": 0.84,
+      "zone": "C",
+      "prox": "near"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक कुर्सी है।",
+     "obstacles": [
+      "सामने एक कुर्सी"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Chair, bahut paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 25.68,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "सामने रुकावट है सामने एक कुर्सी सामने एक कुर्सी है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek chair | Saamne ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.71,
+    "detect": 23.62,
+    "vlm": 0.05
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "partially_correct",
+    "verdict": "partial"
+   },
+   "failure_bucket": "detection_miss"
+  },
+  {
+   "id": "scene_description_013",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 63.62,
+     "contrast": 18.472,
+     "brightness": 59.363,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.25,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.95,
+    "detect": 22.05,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_014",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.301,
+     "contrast": 10.853,
+     "brightness": 56.139,
+     "confidence": 1.0
+    },
+    "detections": {
+     "chair": {
+      "conf": 0.84,
+      "zone": "L",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "बाईं ओर एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Chair, aapke baayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 23.82,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा बाईं ओर एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Baayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.64,
+    "detect": 21.94,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_015",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 63.589,
+     "contrast": 18.476,
+     "brightness": 59.364,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "R",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "दाईं ओर एक व्यक्ति है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 24.32,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा दाईं ओर एक व्यक्ति है।",
+   "display_text": "Raasta saaf nahi dikh raha | Daayin taraf ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.27,
+    "detect": 21.8,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_016",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 78.307,
+     "contrast": 24.045,
+     "brightness": 65.485,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "near"
+     },
+     "chair": {
+      "conf": 0.84,
+      "zone": "R",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Person, bahut paas, saamne",
+     "Chair, aapke daayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 25.79,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है; दाईं ओर एक कुर्सी है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai; daayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 1.8,
+    "detect": 23.65,
+    "vlm": 0.06
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "incorrect",
+    "verdict": "incorrect"
+   },
+   "failure_bucket": "vlm_hallucination"
+  },
+  {
+   "id": "scene_description_017",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 67.216,
+     "contrast": 19.733,
+     "brightness": 61.158,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "R",
+      "prox": "mid"
+     },
+     "chair": {
+      "conf": 0.84,
+      "zone": "L",
+      "prox": "far"
+     }
+    },
+    "vlm": {
+     "summary": "दाईं ओर एक व्यक्ति है; बाईं ओर एक कुर्सी है।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.84
+    },
+    "detections_spoken": [
+     "Person, paas, aapke daayin taraf",
+     "Chair, aapke baayin taraf"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 21.79,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.84
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा दाईं ओर एक व्यक्ति है; बाईं ओर एक कुर्सी है।",
+   "display_text": "Raasta saaf nahi dikh raha | Daayin taraf ek person hai; baayin taraf ek chair hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.63,
+    "detect": 19.86,
+    "vlm": 0.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.84,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "correct",
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "scene_description_018",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 33.032,
+     "contrast": 9.957,
+     "brightness": 55.352,
+     "confidence": 1.0
+    },
+    "detections": {},
+    "vlm": {
+     "summary": "कोई ख़ास चीज़ नहीं दिखी।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.6
+    },
+    "detections_spoken": [],
+    "intent": "describe"
+   },
+   "latency_ms": 27.58,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.6
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा कोई ख़ास चीज़ नहीं दिखी।",
+   "display_text": "Raasta saaf nahi dikh raha | Koi khaas cheez nahi dikhi.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.76,
+    "detect": 25.42,
+    "vlm": 0.02
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.6,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "incorrect",
+    "verdict": "incorrect"
+   },
+   "failure_bucket": "detection_miss"
+  },
+  {
+   "id": "scene_description_019",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 37.494,
+     "contrast": 14.003,
+     "brightness": 58.954,
+     "confidence": 1.0
+    },
+    "detections": {},
+    "vlm": {
+     "summary": "कोई ख़ास चीज़ नहीं दिखी।",
+     "obstacles": [],
+     "path_status": "unclear",
+     "confidence": 0.6
+    },
+    "detections_spoken": [],
+    "intent": "describe"
+   },
+   "latency_ms": 24.25,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.6
+   },
+   "answer_text": "रास्ता साफ़ नहीं दिख रहा कोई ख़ास चीज़ नहीं दिखी।",
+   "display_text": "Raasta saaf nahi dikh raha | Koi khaas cheez nahi dikhi.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.59,
+    "detect": 22.34,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.6,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "incorrect",
+    "verdict": "incorrect"
+   },
+   "failure_bucket": "detection_miss"
+  },
+  {
+   "id": "scene_description_020",
+   "category": "scene_description",
+   "expected_modality": "vlm",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "detect",
+    "vlm"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 69.439,
+     "contrast": 19.452,
+     "brightness": 60.358,
+     "confidence": 1.0
+    },
+    "detections": {
+     "person": {
+      "conf": 0.91,
+      "zone": "C",
+      "prox": "mid"
+     }
+    },
+    "vlm": {
+     "summary": "सामने एक व्यक्ति है।",
+     "obstacles": [
+      "सामने एक व्यक्ति"
+     ],
+     "path_status": "obstacle_ahead",
+     "confidence": 0.91
+    },
+    "detections_spoken": [
+     "Person, paas, saamne"
+    ],
+    "intent": "describe"
+   },
+   "latency_ms": 23.92,
+   "confidence": {
+    "image": 1.0,
+    "vlm": 0.91
+   },
+   "answer_text": "सामने रुकावट है सामने एक व्यक्ति सामने एक व्यक्ति है।",
+   "display_text": "Saamne rukaawat hai | Saamne ek person | Saamne ek person hai.",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.0,
+    "detect": 21.67,
+    "vlm": 0.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     },
+     "vlm": {
+      "modality": "vlm",
+      "confidence": 0.91,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "judge": "partially_correct",
+    "verdict": "partial"
+   },
+   "failure_bucket": "detection_miss"
+  },
+  {
+   "id": "ambiguous_question_001",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 64.263,
+     "contrast": 18.481,
+     "brightness": 59.366,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 2.25,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_002",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1024.197,
+     "contrast": 35.326,
+     "brightness": 230.477,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.72,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.64
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_003",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.617,
+     "contrast": 10.86,
+     "brightness": 56.139,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.95,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "safety question"
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 1.87
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_004",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 825.313,
+     "contrast": 30.968,
+     "brightness": 232.023,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 2.28,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "safety question"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_005",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 64.195,
+     "contrast": 18.474,
+     "brightness": 59.366,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 2.12,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "safety question"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.01
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_006",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 236.236,
+     "contrast": 25.172,
+     "brightness": 87.005,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 3.39,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 3.24
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_007",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.823,
+     "contrast": 10.857,
+     "brightness": 56.141,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.89,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.04,
+    "quality": 1.79
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_008",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 911.298,
+     "contrast": 33.903,
+     "brightness": 230.906,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 2.23,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 2.12
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_009",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 63.538,
+     "contrast": 18.476,
+     "brightness": 59.364,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.99,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.9
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "ambiguous_question_010",
+   "category": "ambiguous_question",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1989.895,
+     "contrast": 25.123,
+     "brightness": 240.29,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.81,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.7
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_001",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 0.703,
+     "contrast": 21.3,
+     "brightness": 230.559,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 2.38,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.28
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_002",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1.753,
+     "contrast": 1.617,
+     "brightness": 199.762,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 2.49,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.39
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_003",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 591.05,
+     "contrast": 114.618,
+     "brightness": 147.646,
+     "confidence": 1.0
+    },
+    "raw_text": "Hwgoogs jowe, re1e,",
+    "intent": "read"
+   },
+   "latency_ms": 4.02,
+   "confidence": {
+    "ocr": 0.17
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.42,
+    "ocr": 1.39
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.17,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_004",
+   "category": "negative_abstain",
+   "expected_modality": "vlm",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 4.508,
+     "contrast": 4.618,
+     "brightness": 14.553,
+     "confidence": 0.069
+    },
+    "intent": "describe"
+   },
+   "latency_ms": 2.11,
+   "confidence": {
+    "image": 0.069
+   },
+   "answer_text": "मुझे ठीक से दिख नहीं रहा, दोबारा कोशिश करें?",
+   "display_text": "Mujhe theek se dikh nahi raha, dobara koshish karein?",
+   "abstained": true,
+   "reason": "vlm_low",
+   "status": "abstain",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 1.98
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 0.06856234906899808,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_005",
+   "category": "negative_abstain",
+   "expected_modality": "vlm",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 0.592,
+     "contrast": 17.269,
+     "brightness": 61.013,
+     "confidence": 0.0
+    },
+    "intent": "describe"
+   },
+   "latency_ms": 2.33,
+   "confidence": {
+    "image": 0.0
+   },
+   "answer_text": "मुझे ठीक से दिख नहीं रहा, दोबारा कोशिश करें?",
+   "display_text": "Mujhe theek se dikh nahi raha, dobara koshish karein?",
+   "abstained": true,
+   "reason": "vlm_low",
+   "status": "abstain",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.25
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_006",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "intent": "read"
+   },
+   "latency_ms": 0.04,
+   "confidence": {
+    "ocr": null
+   },
+   "answer_text": "कैमरा उपलब्ध नहीं है।",
+   "display_text": "Camera available nahi hai.",
+   "abstained": true,
+   "reason": "missing_modality",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": null,
+      "available": false,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_007",
+   "category": "negative_abstain",
+   "expected_modality": "vlm",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "intent": "describe"
+   },
+   "latency_ms": 0.02,
+   "confidence": {
+    "image": null
+   },
+   "answer_text": "कैमरा उपलब्ध नहीं है।",
+   "display_text": "Camera available nahi hai.",
+   "abstained": true,
+   "reason": "missing_modality",
+   "status": "abstain",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "image": {
+      "modality": "image",
+      "confidence": null,
+      "available": false,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_008",
+   "category": "negative_abstain",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 30.599,
+     "contrast": 10.859,
+     "brightness": 56.143,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 3.16,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "read and describe in one request"
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 3.05
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_009",
+   "category": "negative_abstain",
+   "expected_modality": "none",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 853.944,
+     "contrast": 18.846,
+     "brightness": 235.017,
+     "confidence": 1.0
+    },
+    "intent": null
+   },
+   "latency_ms": 1.93,
+   "confidence": {
+    "image": 1.0
+   },
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "read and describe in one request"
+   },
+   "stage_ms": {
+    "router": 0.03,
+    "quality": 1.83
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": true
+     },
+     "image": {
+      "modality": "image",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "negative_abstain_010",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1024.184,
+     "contrast": 35.325,
+     "brightness": 230.477,
+     "confidence": 1.0
+    },
+    "raw_text": "Hwgoogs jowe, re1e,",
+    "intent": "read"
+   },
+   "latency_ms": 3.11,
+   "confidence": {
+    "ocr": 0.17
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.96,
+    "ocr": 1.02
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.17,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": true
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_001",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "read"
+   },
+   "latency_ms": 0.03,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_002",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "describe"
+   },
+   "latency_ms": 0.01,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "describe",
+   "route": {
+    "intent": "describe",
+    "modality": "vlm",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_003",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "change"
+   },
+   "latency_ms": 0.02,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "change",
+   "route": {
+    "intent": "change",
+    "modality": "asr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.0
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_004",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "repeat"
+   },
+   "latency_ms": 0.01,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "repeat",
+   "route": {
+    "intent": "repeat",
+    "modality": "asr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.0
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_005",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "read"
+   },
+   "latency_ms": 0.02,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "read",
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_006",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": "stop"
+   },
+   "latency_ms": 0.01,
+   "confidence": {},
+   "answer_text": "",
+   "display_text": "",
+   "abstained": false,
+   "reason": null,
+   "status": "control",
+   "intent": "stop",
+   "route": {
+    "intent": "stop",
+    "modality": "asr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.0
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "voice_command_007",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": null
+   },
+   "latency_ms": 0.01,
+   "confidence": {},
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.01
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "abstained"
+   },
+   "failure_bucket": "asr_substitution"
+  },
+  {
+   "id": "voice_command_008",
+   "category": "voice_command",
+   "expected_modality": "asr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "asr"
+   ],
+   "raw_output": {
+    "intent": null
+   },
+   "latency_ms": 0.01,
+   "confidence": {},
+   "answer_text": "जानकारी मिल नहीं रही, थोड़ा और बताओ।",
+   "display_text": "Jaankari mil nahi rahi, thoda aur batao.",
+   "abstained": true,
+   "reason": "conflict",
+   "status": "abstain",
+   "intent": null,
+   "route": {
+    "intent": "unclear",
+    "modality": "none",
+    "conflict": true,
+    "why": "no usable target"
+   },
+   "stage_ms": {
+    "router": 0.0
+   },
+   "over_budget": [],
+   "phases": [],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "abstained"
+   },
+   "failure_bucket": "asr_substitution"
+  }
+ ]
+}

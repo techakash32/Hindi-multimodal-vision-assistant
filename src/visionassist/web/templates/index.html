@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hi-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+<a class="skip" href="#speech">{{ s.skip }}</a>
+
+<header class="top">
+  <div class="brand">
+    <h1 class="sr-only">{{ title }}</h1>
+    {% if demo %}<span class="tag-demo">{{ s.demo }}</span>{% endif %}
+    <span class="tag-demo" id="privacy">{{ s.privacy_local if local_only else s.privacy_cloud }}</span>
+  </div>
+  <div class="vitals">
+    <span id="status" class="pill" role="status">{{ s.connecting }}</span>
+    <span class="vital"><b id="fps">–</b> {{ s.fps }}</span>
+    <span class="vital"><b id="infer">–</b> {{ s.infer }}</span>
+    <span class="vital">{{ s.uptime }} <b id="uptime">–</b></span>
+  </div>
+</header>
+
+<noscript><p class="banner">{{ s.noscript }}</p></noscript>
+<div id="offline" class="banner" role="alert" hidden>{{ s.offline_banner }}</div>
+
+<main class="grid">
+  <section class="stage">
+    <div class="video">
+      <img id="video" src="{{ url_for('video') }}" alt="{{ s.alt_video }}" width="640" height="480">
+      <div id="labels" class="labels" aria-hidden="true"></div>
+      <div id="nocam" class="nocam" hidden>{{ s.nocam }}</div>
+    </div>
+    <div class="zones" role="group" aria-label="{{ s.zones_label }}">
+      <div class="zone" id="zone-L"><h2>{{ s.zone_L }}</h2><ul></ul></div>
+      <div class="zone" id="zone-C"><h2>{{ s.zone_C }}</h2><ul></ul></div>
+      <div class="zone" id="zone-R"><h2>{{ s.zone_R }}</h2><ul></ul></div>
+    </div>
+    <p class="legend"><i class="sw near"></i>{{ s.near }} <i class="sw mid"></i>{{ s.mid }} <i class="sw far"></i>{{ s.far }}</p>
+  </section>
+
+  <aside class="side">
+    <section id="speech" class="speech" aria-labelledby="speech-h">
+      <h2 id="speech-h">{{ s.last_said }}</h2>
+      <p id="said" class="said" lang="hi-Latn" aria-live="polite">{{ s.waiting }}</p>
+      <p id="said-hi" class="said-hi" lang="hi" hidden></p>
+      <div id="progress" class="progress" hidden role="progressbar" aria-label="Kaam chal raha hai"><i></i></div>
+    </section>
+
+    <section class="controls" role="group" aria-label="{{ s.commands }}">
+      <button class="btn primary" data-cmd="read"><span>{{ s.read }}</span><kbd>Space</kbd></button>
+      <button class="btn primary" data-cmd="describe"><span>{{ s.describe }}</span><kbd>D</kbd></button>
+      <button class="btn" data-cmd="changed"><span>{{ s.changed }}</span><kbd>C</kbd></button>
+      <button class="btn" data-cmd="repeat"><span>{{ s.repeat }}</span><kbd>R</kbd></button>
+      <button class="btn" data-cmd="mute" id="mute" aria-pressed="false"><span>{{ s.mute }}</span><kbd>M</kbd></button>
+    </section>
+
+    <section class="radar" aria-labelledby="radar-h">
+      <h2 id="radar-h">{{ s.radar }}</h2>
+      <svg id="radar" viewBox="0 22 320 170" role="img" aria-label="{{ s.radar }}">
+        <g class="rings">
+          <path d="M 20 170 A 140 140 0 0 1 300 170" />
+          <path d="M 65 170 A 95 95 0 0 1 255 170" />
+          <path d="M 110 170 A 50 50 0 0 1 210 170" />
+          <line x1="160" y1="170" x2="160" y2="30" class="axis" />
+          <line x1="160" y1="170" x2="48" y2="72" class="axis" />
+          <line x1="160" y1="170" x2="272" y2="72" class="axis" />
+        </g>
+        <polygon points="160,150 152,170 168,170" class="you" />
+        <text x="160" y="188" text-anchor="middle" class="rl rl-you">{{ s.radar_you }}</text>
+        <text x="110" y="188" text-anchor="middle" class="rl">{{ s.near }}</text>
+        <text x="56" y="188" text-anchor="middle" class="rl">{{ s.mid }}</text>
+        <text x="16" y="188" text-anchor="middle" class="rl">{{ s.far }}</text>
+        <g id="radar-dots"></g>
+      </svg>
+      <p id="radar-empty" class="radar-empty">{{ s.radar_empty }}</p>
+    </section>
+  </aside>
+</main>
+
+<section class="panels">
+  <div class="panel">
+    <h2>{{ s.activity }}</h2>
+    <ol id="events" class="events"><li class="empty">{{ s.activity_empty }}</li></ol>
+  </div>
+  <div class="panel">
+    <h2>{{ s.response }}</h2>
+    <table class="stats">
+      <thead><tr><th scope="col">{{ s.col_action }}</th><th scope="col">{{ s.col_runs }}</th><th scope="col">{{ s.col_median }}</th><th scope="col">{{ s.col_slow }}</th></tr></thead>
+      <tbody id="stats"></tbody>
+    </table>
+  </div>
+  <div class="panel">
+    <h2>{{ s.system }}</h2>
+    <ul id="health" class="health"></ul>
+  </div>
+</section>
+
+<footer>{{ s.footer.format(version=version) }}</footer>
+<script type="application/json" id="strings">{{ s | tojson }}</script>
+<script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</body>
+</html>

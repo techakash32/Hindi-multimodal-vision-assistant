@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visionassist"
+version = "1.0.0"
+description = "Offline-first assistive vision for blind and low-vision users: object alerts, text reading and scene description in English and Hindi."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python>=4.9",
+  "requests>=2.31",
+  "python-dotenv>=1.0",
+  "flask>=3.0",
+  "deep-translator>=1.11",
+]
+
+[project.optional-dependencies]
+ml = ["ultralytics>=8.3", "piper-tts>=1.2"]
+voice = ["vosk>=0.3.45", "sounddevice>=0.4.6"]
+web = ["waitress>=3.0"]
+eval = ["jiwer==3.0.5"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.5"]
+
+[project.scripts]
+visionassist = "visionassist.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+visionassist = ["web/templates/*.html", "web/static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "eval"]
+pythonpath = ["src", "."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+src = ["src", "tests", "eval", "tools"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501", "B008"]

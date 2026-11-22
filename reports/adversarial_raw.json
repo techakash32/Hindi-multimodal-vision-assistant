@@ -1,0 +1,1506 @@
+{
+ "meta": {
+  "date": "2026-11-21 17:03 UTC+0000",
+  "commit": "n/a (not a git checkout)",
+  "host": "Intel(R) Xeon(R) Processor @ 2.10GHz (2 cores), GPU: none, Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "opencv": "5.0.0",
+  "backend": "auto",
+  "models": {
+   "detector": "demo colour-blob model (not YOLO)",
+   "vlm": "deterministic template over detections (not a language model)",
+   "asr": "not exercised (typed / simulated transcripts; no audio, no Vosk)",
+   "ocr": "tesseract 5.3.4 (local, real; psm 6, lang eng)"
+  },
+  "judge": "keyword-overlap judge (deterministic)",
+  "abstention": {
+   "ocr_tau": 0.5,
+   "vlm_tau": 0.4,
+   "aggregate_tau_low": 0.45,
+   "aggregate_tau_high": 0.7,
+   "enabled": true
+  }
+ },
+ "records": [
+  {
+   "id": "adv_001",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 109.207,
+     "contrast": 21.598,
+     "brightness": 86.428,
+     "confidence": 1.0
+    },
+    "raw_text": "MG ROAD",
+    "intent": "read"
+   },
+   "latency_ms": 161.8,
+   "confidence": {
+    "ocr": 0.966
+   },
+   "answer_text": "MG ROAD",
+   "display_text": "MG ROAD",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 2.69,
+    "ocr": 158.58
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.9655639650000001,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_002",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 113.682,
+     "contrast": 28.332,
+     "brightness": 57.436,
+     "confidence": 1.0
+    },
+    "raw_text": "NO PARKING",
+    "intent": "read"
+   },
+   "latency_ms": 137.83,
+   "confidence": {
+    "ocr": 0.965
+   },
+   "answer_text": "NO PARKING",
+   "display_text": "NO PARKING",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.89,
+    "ocr": 136.76
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.964824485,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_003",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 206.948,
+     "contrast": 14.124,
+     "brightness": 126.626,
+     "confidence": 1.0
+    },
+    "raw_text": "Sharma Medical Store",
+    "intent": "read"
+   },
+   "latency_ms": 118.17,
+   "confidence": {
+    "ocr": 0.964
+   },
+   "answer_text": "Sharma Medical Store",
+   "display_text": "Sharma Medical Store",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.9,
+    "ocr": 117.1
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.96366984,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_004",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 216.452,
+     "contrast": 13.856,
+     "brightness": 85.304,
+     "confidence": 1.0
+    },
+    "raw_text": "Bus 512 to Andheri",
+    "intent": "read"
+   },
+   "latency_ms": 134.64,
+   "confidence": {
+    "ocr": 0.959
+   },
+   "answer_text": "Bus 512 to Andheri",
+   "display_text": "Bus 512 to Andheri",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.88,
+    "ocr": 133.59
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.9588570024999999,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_005",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1067.767,
+     "contrast": 41.622,
+     "brightness": 228.264,
+     "confidence": 1.0
+    },
+    "raw_text": "—_ Paracetamol 500mg",
+    "intent": "read"
+   },
+   "latency_ms": 118.55,
+   "confidence": {
+    "ocr": 0.679
+   },
+   "answer_text": "शायद —_ Paracetamol 500mg",
+   "display_text": "Shayad —_ Paracetamol 500mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.91,
+    "ocr": 117.44
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.6788045500000001,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": true,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.17647058823529413,
+    "wer": 0.5,
+    "verdict": "incorrect"
+   },
+   "failure_bucket": "ocr_recognition_error"
+  },
+  {
+   "id": "adv_006",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 217.228,
+     "contrast": 25.127,
+     "brightness": 82.021,
+     "confidence": 1.0
+    },
+    "raw_text": "EXIT",
+    "intent": "read"
+   },
+   "latency_ms": 103.98,
+   "confidence": {
+    "ocr": 0.964
+   },
+   "answer_text": "EXIT",
+   "display_text": "EXIT",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.87,
+    "ocr": 102.87
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.96401855,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_007",
+   "category": "ocr_sign",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 465.398,
+     "contrast": 32.112,
+     "brightness": 54.902,
+     "confidence": 1.0
+    },
+    "raw_text": "Platform 3",
+    "intent": "read"
+   },
+   "latency_ms": 118.26,
+   "confidence": {
+    "ocr": 0.964
+   },
+   "answer_text": "Platform 3",
+   "display_text": "Platform 3",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.05,
+    "ocr": 117.04
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.96438938,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_008",
+   "category": "ocr_medicine",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1293.902,
+     "contrast": 33.985,
+     "brightness": 229.757,
+     "confidence": 1.0
+    },
+    "raw_text": "Azithromycin 250mg",
+    "intent": "read"
+   },
+   "latency_ms": 131.96,
+   "confidence": {
+    "ocr": 0.965
+   },
+   "answer_text": "Azithromycin 250mg",
+   "display_text": "Azithromycin 250mg",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.93,
+    "ocr": 130.83
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.965452005,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_009",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1011.402,
+     "contrast": 24.271,
+     "brightness": 238.66,
+     "confidence": 1.0
+    },
+    "raw_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+    "intent": "read"
+   },
+   "latency_ms": 136.3,
+   "confidence": {
+    "ocr": 0.949
+   },
+   "answer_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+   "display_text": "Paneer Tikka 220 Dal Makhani 180 Butter Naan 40",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.13,
+    "ocr": 134.96
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.9486714255555556,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_010",
+   "category": "ocr_menu",
+   "expected_modality": "ocr",
+   "expected_behavior": "answer",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 641.285,
+     "contrast": 14.306,
+     "brightness": 144.017,
+     "confidence": 1.0
+    },
+    "raw_text": "Masala Dosa 90 Idli Sambar 60",
+    "intent": "read"
+   },
+   "latency_ms": 124.34,
+   "confidence": {
+    "ocr": 0.958
+   },
+   "answer_text": "Masala Dosa 90 Idli Sambar 60",
+   "display_text": "Masala Dosa 90 Idli Sambar 60",
+   "abstained": false,
+   "reason": null,
+   "status": "answer",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 1.12,
+    "ocr": 123.03
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.9580237716666667,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "cer": 0.0,
+    "wer": 0.0,
+    "verdict": "correct"
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_011",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 25.629,
+     "contrast": 16.542,
+     "brightness": 86.439,
+     "confidence": 1.0
+    },
+    "raw_text": "",
+    "intent": "read"
+   },
+   "latency_ms": 96.98,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "कोई टेक्स्ट नहीं मिला। कैमरा पास लाकर ट्राई करें।",
+   "display_text": "Koi text nahi mila. Camera paas laakar try karein.",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "no_text",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 0.84,
+    "ocr": 96.0
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_012",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 8.057,
+     "contrast": 18.779,
+     "brightness": 57.443,
+     "confidence": 0.23
+    },
+    "intent": "read"
+   },
+   "latency_ms": 0.94,
+   "confidence": {
+    "ocr": 0.23
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 0.83
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.22986032196969697,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_013",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 2.716,
+     "contrast": 1.605,
+     "brightness": 13.725,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 0.76,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 0.7
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_014",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 662.75,
+     "contrast": 6.11,
+     "brightness": 21.14,
+     "confidence": 0.508
+    },
+    "raw_text": "ae ee See por ate az Be Les sea ee es ee Reet e Meets AAO TE oe eae se eae Lee aie ee Seale oe eats PE NY Sig ON 8 BOE ON SRR Fee Oe yas Se re eae oe . oe Ss es oe ae a ee — — a —. ee oe oe ee Ae ey oS ie CY tee on ee Pee . aS a 2 ae ae oe See eS 2 eo oo oo oe ae ee a oe ee ee ee | ee oe ces Pear ne 2s Pe niger eee te Ce | ies eae Loe “ gS: Ls SRN be Sea gS) Ronee Un ee GC on a Se See a ee a ee a oe oe as 2. 7 oe ee os ee eae Bere Soe ae : ae ae Bl Ge oe nes PG oe - oo oe ae STC EO SIS EO Tie ee : ee oe bes ee Beak ie Nua Sato ane So GRO TAR Ra icp So EDN oe OO ie",
+    "intent": "read"
+   },
+   "latency_ms": 1587.37,
+   "confidence": {
+    "ocr": 0.175
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 0.69,
+    "ocr": 1586.26
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.5077871817129629,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.1749859759659091,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_015",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 579.2,
+     "contrast": 116.504,
+     "brightness": 98.263,
+     "confidence": 1.0
+    },
+    "raw_text": "",
+    "intent": "read"
+   },
+   "latency_ms": 100.62,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "कोई टेक्स्ट नहीं मिला। कैमरा पास लाकर ट्राई करें।",
+   "display_text": "Koi text nahi mila. Camera paas laakar try karein.",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "no_text",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.05,
+    "quality": 1.26,
+    "ocr": 99.16
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_016",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 1.002,
+     "contrast": 1.478,
+     "brightness": 193.232,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 0.93,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.85
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_017",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 0.426,
+     "contrast": 17.848,
+     "brightness": 57.091,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 0.75,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 0.65
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_018",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 6.212,
+     "contrast": 2.625,
+     "brightness": 17.56,
+     "confidence": 0.0
+    },
+    "intent": "read"
+   },
+   "latency_ms": 0.73,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 0.68
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_019",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 610.083,
+     "contrast": 116.265,
+     "brightness": 85.925,
+     "confidence": 1.0
+    },
+    "raw_text": "",
+    "intent": "read"
+   },
+   "latency_ms": 100.96,
+   "confidence": {
+    "ocr": 0.0
+   },
+   "answer_text": "कोई टेक्स्ट नहीं मिला। कैमरा पास लाकर ट्राई करें।",
+   "display_text": "Koi text nahi mila. Camera paas laakar try karein.",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "no_text",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.01,
+    "quality": 0.59,
+    "ocr": 100.3
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.0,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  },
+  {
+   "id": "adv_020",
+   "category": "negative_abstain",
+   "expected_modality": "ocr",
+   "expected_behavior": "abstain",
+   "actual_modalities": [
+    "ocr"
+   ],
+   "raw_output": {
+    "image_quality": {
+     "sharpness": 608.207,
+     "contrast": 14.388,
+     "brightness": 237.271,
+     "confidence": 1.0
+    },
+    "raw_text": "Bees se 0 7 Ce Lote preeampenerermparnaee = SSeS Ue ares A NLA RAY Aa tianee Beek REY the Soar ne RO ot a RL : Seen ng pans ela",
+    "intent": "read"
+   },
+   "latency_ms": 282.59,
+   "confidence": {
+    "ocr": 0.162
+   },
+   "answer_text": "पक्का नहीं हूँ — कैमरा थोड़ा पास करो?",
+   "display_text": "Pakka nahi hoon — camera thoda paas karo?",
+   "abstained": true,
+   "reason": "ocr_low",
+   "status": "abstain",
+   "intent": "read",
+   "route": {
+    "intent": "read",
+    "modality": "ocr",
+    "conflict": false,
+    "why": ""
+   },
+   "stage_ms": {
+    "router": 0.02,
+    "quality": 0.91,
+    "ocr": 281.52
+   },
+   "over_budget": [],
+   "phases": [
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 1.0,
+      "available": true,
+      "conflict": false
+     }
+    },
+    {
+     "router": {
+      "modality": "router",
+      "confidence": null,
+      "available": true,
+      "conflict": false
+     },
+     "ocr": {
+      "modality": "ocr",
+      "confidence": 0.161785244,
+      "available": true,
+      "conflict": false
+     }
+    }
+   ],
+   "hedged": false,
+   "fixture_missing": false,
+   "scores": {
+    "verdict": "correct",
+    "reason_match": false
+   },
+   "failure_bucket": null
+  }
+ ]
+}
