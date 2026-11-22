@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use VisionAssist in research or a project, please cite it."
+title: "VisionAssist: Offline-first Hindi AI vision assistant for blind and visually impaired people"
+type: software
+authors:
+  - alias: "techakash32"
+repository-code: "https://github.com/techakash32/Hindi-multimodal-vision-assistant"
+license: MIT
+version: "1.0.0"
+abstract: >-
+  VisionAssist is an open-source, offline-first assistive vision system that speaks Hindi.
+  It detects nearby objects with YOLOv8, reads printed text with OCR, describes scenes with
+  a vision-language model, and responds to offline Hindi voice commands.
+keywords:
+  - assistive technology
+  - accessibility
+  - Hindi
+  - visually impaired
+  - computer vision
+  - offline AI
+  - text to speech
+  - OCR
+  - YOLOv8

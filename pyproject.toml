@@ -5,7 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "visionassist"
 version = "1.0.0"
-description = "Offline-first assistive vision for blind and low-vision users: object alerts, text reading and scene description in English and Hindi."
+description = "Offline-first Hindi AI vision assistant for blind and visually impaired users: spoken object alerts, OCR text reading, scene description and offline Hindi voice commands."
+keywords = ["assistive-technology", "accessibility", "hindi", "visually-impaired", "blind", "computer-vision", "yolov8", "ocr", "text-to-speech", "offline-ai", "piper", "vosk"]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

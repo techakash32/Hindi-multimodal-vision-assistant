@@ -6,7 +6,7 @@ Needs Python 3.10 to 3.12, a webcam and a microphone (the demo needs neither), a
 
 **Windows (PowerShell)**
 ```powershell
-cd visionassist
+cd Hindi-multimodal-vision-assistant
 py -3.12 -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -15,7 +15,7 @@ pip install -e .
 
 **macOS / Linux**
 ```bash
-cd visionassist
+cd Hindi-multimodal-vision-assistant
 python3.12 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

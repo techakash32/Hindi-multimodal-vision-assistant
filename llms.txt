@@ -1,0 +1,18 @@
+# VisionAssist
+
+> VisionAssist is an open-source, offline-first assistive vision system that speaks Hindi, built for blind and visually impaired users. It runs on a laptop with a webcam: YOLOv8 object detection with spoken Hindi alerts (what, how close, which side), OCR for reading signs and labels, scene description through a vision-language model, and offline Hindi voice commands (Vosk). Hindi speech uses an offline Piper voice. It is an assistive aid, not a safety device.
+
+Key facts:
+- Language: Hindi (Devanagari) for everything the user hears or reads; Hinglish on screen.
+- Offline: object alerts, Hindi speech, voice commands and "what changed" work without internet. OCR and scene description use free online APIs by default; `LOCAL_ONLY=true` keeps all frames on the device.
+- Stack: Python 3.10 to 3.12, YOLOv8n, Piper TTS, Vosk, OpenCV, Flask, Tesseract, OpenRouter, OCR.space.
+- License: MIT.
+- Evaluation: 80 synthetic scenarios; results show pipeline behaviour, not real-world accuracy.
+
+## Docs
+
+- [README](README.md): overview, quick start, FAQ
+- [Local setup](docs/SETUP_LOCAL.md): Windows, macOS, Linux, Docker
+- [Architecture decisions](docs/adr/README.md)
+- [Evaluation report](reports/eval_report.md)
+- [Contributing](CONTRIBUTING.md)
