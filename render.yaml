@@ -1,0 +1,13 @@
+# Render Blueprint: free public DEMO (synthetic camera, no keys, no private data).
+services:
+  - type: web
+    name: visionassist-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: LOCAL_ONLY
+        value: "true"

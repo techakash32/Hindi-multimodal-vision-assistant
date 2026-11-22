@@ -16,4 +16,5 @@ COPY . .
 
 EXPOSE 8000
 # Dashboard on all interfaces; set WEB_TOKEN if the port is reachable by others.
-CMD ["visionassist", "run", "--ui", "web", "--demo", "--no-browser", "--host", "0.0.0.0"]
+# Hosts such as Render set $PORT; fall back to 8000 locally.
+CMD ["sh", "-c", "visionassist run --ui web --demo --no-browser --host 0.0.0.0 --port ${PORT:-8000}"]

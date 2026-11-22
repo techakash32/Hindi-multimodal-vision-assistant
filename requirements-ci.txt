@@ -5,6 +5,7 @@ opencv-python-headless>=4.9
 requests>=2.31
 python-dotenv>=1.0
 flask>=3.0
+waitress>=3.0
 deep-translator>=1.11
 jiwer==3.0.5
 pytest>=8
