@@ -62,6 +62,51 @@ It is built for the many Hindi speakers who get no assistive technology in their
 | Hands-free | Offline Hindi voice commands: "Text padhein", "Scene batayein", "Kya badla", "Dobara bolein", "Awaaz band karein" | Yes |
 | Use it your way | OpenCV window, Hindi web dashboard, or headless voice-only mode for a wearable or Raspberry Pi | Yes |
 
+## Who is it for?
+
+- **Blind and low-vision users** who want an assistant in Hindi instead of English, which works without a data connection.
+- **Developers and students** building accessibility tools, Indic-language voice interfaces or edge-AI projects, who want a complete, tested reference with a real architecture.
+- **Researchers and NGOs** who need an inspectable, self-hostable baseline for assistive vision in Indian languages, with an evaluation harness and failure taxonomy included.
+- **Educators** teaching computer vision, speech and resilient system design with a readable codebase and [architecture decision records](docs/adr/README.md).
+
+### Everyday situations it is designed for
+
+| Situation | What VisionAssist does |
+| --- | --- |
+| Someone walks up in a hallway | Says the person is very close and on which side, once, without repeating |
+| Cows, dogs or vehicles on the road | Treats them as high priority; cows, horses and elephants are in the navigation list on purpose |
+| Picking the right medicine | Press **Space** to read the label aloud in Hindi |
+| A sign or menu in English | Reads it and translates it to Hindi when online |
+| Walking into a new room | Press **D** for a spoken scene description, then **C** later to hear only what changed |
+| Camera view is blurry or dark | Says it is not sure and asks you to adjust, instead of guessing |
+| Hands full | Hindi voice commands, no keyboard needed |
+
+## What it detects
+
+VisionAssist uses the 80-class COCO model but only announces the **44 classes that matter for getting around**, so you are not buried in alerts about frisbees and ties.
+
+| Group | Examples |
+| --- | --- |
+| People, vehicles, traffic | person, bicycle, motorcycle, car, bus, train, truck, traffic light, stop sign, fire hydrant, bench |
+| Animals | dog, cat, bird, cow, horse, sheep, elephant |
+| Furniture and collision risks | chair, couch, bed, dining table, toilet, potted plant |
+| Carried items | backpack, umbrella, handbag, suitcase |
+| Reachable objects | bottle, cup, bowl, fork, knife, spoon, laptop, keyboard, mouse, cell phone, remote, book |
+| Fixtures | sink, refrigerator, oven, microwave |
+
+People, vehicles and large animals are announced first, then furniture, then small objects. Not detected: steps, kerbs, holes, glass doors and anything outside COCO (see [Known limitations](#known-limitations)).
+
+### How an alert is decided
+
+An object is spoken only when it passes every check, which is what keeps the assistant calm:
+
+1. Detection confidence is at least **0.60**, and the smoothed confidence at least **0.70** (`CONF_THRESH`, `MIN_SPEAK_CONF`).
+2. It has been seen in **3 consecutive detections** (`STABLE_FRAMES`), so one-frame flickers are ignored.
+3. It fills at least **2%** of the frame, or **0.8%** for small handheld items (`MIN_SPEAK_AREA`, `MIN_SPEAK_AREA_SMALL`).
+4. It has not already been announced. It is announced again only after it leaves view and returns (`REANNOUNCE_AFTER_S`).
+
+All of these are tunable in `.env`.
+
 ## Try it in 60 seconds (no camera, no keys)
 
 You need Python 3.10 to 3.12 and nothing else.
@@ -115,6 +160,20 @@ visionassist run                  # opens the Hindi dashboard in your browser
 | **Q**, **Esc** / "आवाज़ बंद करें" (Awaaz band karein) | Quit. By voice the whole phrase is needed; "band" alone does nothing. The dashboard button of that name only mutes. |
 
 Click the OpenCV window once so it receives keystrokes.
+
+### Voice command words
+
+Voice uses a small, restricted Hindi word list, which is why it works offline and reacts fast. Spelling variants are folded together, for example ढ़ typed as one character or two.
+
+| Intent | Hindi words recognised (examples) |
+| --- | --- |
+| Read text | पढ़ो, पढ़ें, पढ़िए, पढ़ दो |
+| Describe scene | बताओ, बताइए, बताएं, वर्णन, देखो, देखिए |
+| What changed | बदला, बदलाव, बदली |
+| Repeat | दोहराओ, दोहराएं, दोबारा, फिर |
+| Quit | बंद, बन्द, समाप्त, खत्म, रुको |
+
+The full list and the confidence threshold are in [`voice.py`](src/visionassist/voice.py) and `MIN_CMD_CONF`. If a word is misheard on your microphone or accent, add it to the list.
 
 ## How it works
 
@@ -341,8 +400,40 @@ Yes. The code is MIT licensed. The optional OCR.space and OpenRouter services ha
 ### How is this different from Be My Eyes, Seeing AI or Lookout?
 Those are polished consumer apps that depend on cloud services and mainly serve English. VisionAssist is an open, hackable, Hindi-first, offline-first project you can inspect, run yourself and extend. It is a research and engineering project and is not a product replacement for them.
 
+### Which camera does it use?
+Any webcam OpenCV can open, 640×480 by default. Use `--camera 1` for a second camera. A phone used as a webcam also works if it shows up as a camera device.
+
+### How accurate is the Hindi speech recognition?
+Not measured on real speech yet. Commands use a small Vosk Hindi model with a restricted word list, so they are fast and offline but sensitive to microphone and accent. An Indian-English Vosk model can recognise Indian accents better. Run `visionassist mics` to pick the right microphone.
+
+### What happens when the internet or an API fails?
+Detection, alerts and voice keep working. Failed OCR or scene requests produce a spoken Hindi error, and failing providers are paused by circuit breakers (for example OCR for 60 seconds after 3 failures) so the app never hangs. See [Graceful degradation](#graceful-degradation).
+
+### Why does it sometimes say it is not sure?
+On purpose. When image quality or OCR confidence is low, a guardrail refuses before calling the vision model and asks for a clarification, because a confident wrong answer about a medicine label is worse than no answer. See [ADR 0004](docs/adr/0004-abstain-before-the-vlm.md).
+
+### Can I run it in Docker?
+Yes, there is a `Dockerfile` and a dev container. See [docs/SETUP_LOCAL.md](docs/SETUP_LOCAL.md).
+
+### Can I use it commercially or in my own project?
+Yes. It is MIT licensed. Note that the optional free API tiers and the downloaded models have their own terms.
+
 ### Can I add another Indian language?
 It is designed to make that easier: all user-facing text is in [`strings.py`](src/visionassist/strings.py), and Piper and Vosk both have models for other languages. It is a good first contribution. See [Contributing](#contributing).
+
+## Roadmap
+
+Ideas, not promises. Open an issue to vote on or take one.
+
+- [ ] Real-world evaluation with Hindi speech clips and photographed labels
+- [ ] Screen-reader testing (NVDA, VoiceOver, TalkBack) and fixes
+- [ ] Step, kerb and glass-door detection with a custom-trained model
+- [ ] Depth or distance estimate beyond box size
+- [ ] Raspberry Pi / wearable benchmark and a lightweight profile
+- [ ] More Indian languages: Marathi, Bengali, Tamil, Telugu
+- [ ] Currency note recognition
+- [ ] Face and "who is this" for people the user chooses to enrol (opt-in, local only)
+- [ ] Phone app front end
 
 ## Contributing
 
