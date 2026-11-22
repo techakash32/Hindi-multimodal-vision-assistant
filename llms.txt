@@ -12,6 +12,8 @@ Key facts:
 ## Docs
 
 - [README](README.md): overview, quick start, FAQ
+- [Live demo](https://visionassist-demo.onrender.com): hosted demo mode with a synthetic camera
+- [Book (PDF)](docs/VisionAssist-Book.pdf): design, evaluation and honest limits
 - [Local setup](docs/SETUP_LOCAL.md): Windows, macOS, Linux, Docker
 - [Architecture decisions](docs/adr/README.md)
 - [Evaluation report](reports/eval_report.md)

@@ -15,7 +15,9 @@ A webcam watches the scene. VisionAssist speaks short, prioritised alerts in Hin
 ![Language](https://img.shields.io/badge/voice-Hindi%20(हिंदी)-orange)
 [![Stars](https://img.shields.io/github/stars/techakash32/Hindi-multimodal-vision-assistant?style=social)](https://github.com/techakash32/Hindi-multimodal-vision-assistant/stargazers)
 
-[**Try the demo in 60 seconds**](#try-it-in-60-seconds-no-camera-no-keys) ·
+[**▶ Live demo**](https://visionassist-demo.onrender.com) ·
+[**📖 Read the book (PDF)**](docs/VisionAssist-Book.pdf) ·
+[**Run it locally**](#try-it-in-60-seconds-no-camera-no-keys) ·
 [**Quick start**](#quick-start) ·
 [**FAQ**](#frequently-asked-questions) ·
 [**Contribute**](#contributing)
@@ -55,7 +57,7 @@ It is built for the many Hindi speakers who get no assistive technology in their
 | Know what is nearby | YOLOv8n detects objects every other frame; alerts say *what*, *how close* and *which side* | Yes |
 | Not be nagged | Alerts need a stable, confident, large-enough detection, and each object is announced once until it leaves view | Yes |
 | Hear everything in Hindi | Offline Hindi Piper voice; every spoken and on-screen message is Hindi, and text from signs is translated to Hindi | Yes (translating English signs needs internet) |
-| Read a label or sign | OCR on the centre of the frame (**Space**), with a local Tesseract fallback | Local OCR: yes |
+| Read a label or sign | OCR on the centre of the frame (**Space**), with a local Tesseract fallback | Local Tesseract: English text only |
 | Understand the scene | Free OpenRouter vision models with JSON output, hedged requests and circuit breakers (**D**) | No |
 | Know what changed | Compares objects now versus the last description (**C**) | Yes |
 | Hear it again | **R** repeats the last message | Yes |
@@ -106,6 +108,16 @@ An object is spoken only when it passes every check, which is what keeps the ass
 4. It has not already been announced. It is announced again only after it leaves view and returns (`REANNOUNCE_AFTER_S`).
 
 All of these are tunable in `.env`.
+
+## Live demo
+
+**[visionassist-demo.onrender.com](https://visionassist-demo.onrender.com)** shows the real Hindi dashboard running in `--demo` mode: a synthetic camera feed, the left / ahead / right radar, spoken-message card, and canned text-reading and scene-description results.
+
+- It is a **demo, not the product**. The real assistant needs a camera, microphone and speakers on your own machine, so it cannot run on a cloud server.
+- It runs on a free host that sleeps when idle, so **the first load can take about a minute**.
+- No keys are configured and no real camera is used, so nothing private is involved.
+
+Want to host your own copy? See [docs/DEPLOY_RENDER.md](docs/DEPLOY_RENDER.md).
 
 ## Try it in 60 seconds (no camera, no keys)
 
@@ -306,6 +318,30 @@ python -m eval.calibrate_abstention
 python tools/latency_benchmark.py
 ```
 
+## Performance
+
+Measured on the author's Windows laptop (12-core Intel CPU, NVIDIA RTX 2050, Python 3.11) with real YOLOv8n and real cloud services. One warm-up call per stage is discarded. Full details and the exact setup are in [`reports/latency_2026-11-22.md`](reports/latency_2026-11-22.md).
+
+| Stage | n | p50 (ms) | p95 (ms) | Note |
+|---|---|---|---|---|
+| Object detection (YOLOv8n, 640×480) | 10 | **29.8** | 85.3 | Local; safety alerts never wait for the network |
+| Text reading (OCR.space) | 10 | 565.3 | 1244.0 | Network; synthetic images |
+| Scene description (free VLM) | 5 | 982.1 | 1218.4 | Network; free models vary |
+| Orchestration overhead | 20 | 2.6 | 3.2 | This project's own code |
+| Voice recognition (ASR) | n/a | n/a | n/a | Not measured: no Hindi audio clips yet |
+
+In practice: a safety alert takes tens of milliseconds, and a spoken scene description takes about one to two seconds. Small n means p95 is close to the maximum. Reproduce on your hardware with `python tools/latency_benchmark.py`.
+
+## Session replay
+
+```bash
+visionassist run --record                      # writes logs/sessions/<time>/session.jsonl and frames/
+visionassist replay logs/sessions/<time>       # re-runs every recorded request through pipeline.run_once and lists what changed
+visionassist replay logs/sessions/<time> --export-scenarios my_cases.jsonl   # unlabelled eval scenarios to hand-label
+```
+
+Real use produces test cases: recorded requests can be exported and hand-labelled into new evaluation scenarios.
+
 ## Graceful degradation
 
 | What fails | What the user gets |
@@ -369,7 +405,13 @@ tools/             manual hardware checks and latency benchmark
 - Detection uses COCO classes; steps, kerbs, holes and glass doors are not detected.
 - "Near / nearby / far" is estimated from box size, not measured depth.
 - Evaluation uses synthetic images only (see [Evaluation](#evaluation)).
-- Hindi voice-command accuracy has not been measured on real speech. Scene and text results come from free online services with rate limits.
+- **No blind or low-vision person has used or tested it.** Everything about usefulness is a hypothesis until it is.
+- Hindi voice-command accuracy has not been measured on real speech; it has been tried on a few commands on one microphone.
+- Offline Tesseract OCR does not read Devanagari (Hindi language data is not bundled).
+- Free cloud services rate-limit, change and disappear. Failure handling was tested with fakes and exercised once by a real rate limit, never by an unplugged camera or a dropped network.
+- Hinglish transliteration is rule-based and will sometimes produce an awkward spelling.
+- Abstention thresholds were fitted on synthetic images and may not transfer.
+- Scene descriptions and text reading from free online services come with rate limits.
 
 ## Frequently asked questions
 
@@ -383,7 +425,7 @@ Yes, for the safety-critical parts. Object detection, Hindi speech output, Hindi
 Hindi is the default and only user-facing language. Everything spoken or shown is Hindi. Screen text can also appear in Hinglish (Hindi written in Roman letters). An English voice path exists behind `HINDI_ONLY=false`.
 
 ### Can it read medicine labels, signs and menus?
-Yes. Press **Space** or say "text padhein". The centre of the frame goes through OCR and the result is read aloud in Hindi, translated if the text is English. Accuracy on real-world labels has not been measured; see [Evaluation](#evaluation).
+Yes. Press **Space** or say "text padhein". The centre of the frame goes through OCR and the result is read aloud in Hindi, translated if the text is English. Local Tesseract OCR reads English text only, because its Hindi language data is not bundled, so Devanagari signs are not covered offline. Accuracy on real-world labels has not been measured; see [Evaluation](#evaluation).
 
 ### Is it safe to use for navigation?
 No. It is an assistive aid and not a safety device. It cannot detect steps, kerbs, holes or glass doors, and distance is estimated from box size. Keep using your cane, guide dog or sighted help.
@@ -421,19 +463,46 @@ Yes. It is MIT licensed. Note that the optional free API tiers and the downloade
 ### Can I add another Indian language?
 It is designed to make that easier: all user-facing text is in [`strings.py`](src/visionassist/strings.py), and Piper and Vosk both have models for other languages. It is a good first contribution. See [Contributing](#contributing).
 
+## Documentation and the book
+
+The project comes with a 50-page book, **[VisionAssist: design, evaluation, and honest limits (PDF)](docs/VisionAssist-Book.pdf)**, by the author. It covers the problem and the user, the architecture, the one-language-two-scripts design (Devanagari voice, Hinglish screen), abstention, resilience, the evaluation method, what broke, how to deploy, and the limits. Every number in it comes from a report file in this repository and is labelled with how it was measured.
+
+| Read | For |
+| --- | --- |
+| [Book (PDF)](docs/VisionAssist-Book.pdf) | The full story, design decisions and honest limits |
+| [docs/SETUP_LOCAL.md](docs/SETUP_LOCAL.md) | Install on Windows, macOS, Linux, Docker |
+| [docs/DEPLOY_RENDER.md](docs/DEPLOY_RENDER.md) | Host your own demo for free |
+| [docs/adr/](docs/adr/README.md) | Eight short architecture decision records |
+| [reports/](reports/) | Evaluation, calibration, adversarial and latency reports |
+| [CHANGELOG.md](CHANGELOG.md) | What changed |
+
+## Lessons from building it
+
+Most of what the tests missed was found in the first hour of real use. A few examples from the book:
+
+| What was seen | Cause | Fix |
+| --- | --- | --- |
+| Saying the quit phrase did nothing | The web server blocked the main thread, so the quit signal was never read | Main thread waits for the signal; regression test added |
+| "Too many requests" from translation, then silence | Calls faster than the free service allowed | Calls spaced 0.3 s; 45 s pause after a rate-limit reply |
+| A scene call waited 15 s and failed | Slow free tier; timeout too generous for a blind user | Default timeout 10 s |
+| Spoken words heard correctly but not matched | Equivalent spellings of the same Hindi letters | Normalise spellings before matching |
+| First CI run failed | The light dependency list lacked an image library | Added to both requirements files |
+
+The main lessons: run it the way a user does, treat free services as a failure mode rather than a dependency, and measure before claiming.
+
 ## Roadmap
 
-Ideas, not promises. Open an issue to vote on or take one.
+In order of value, taken from the book's next steps. Open an issue to take one.
 
-- [ ] Real-world evaluation with Hindi speech clips and photographed labels
-- [ ] Screen-reader testing (NVDA, VoiceOver, TalkBack) and fixes
-- [ ] Step, kerb and glass-door detection with a custom-trained model
-- [ ] Depth or distance estimate beyond box size
-- [ ] Raspberry Pi / wearable benchmark and a lightweight profile
-- [ ] More Indian languages: Marathi, Bengali, Tamil, Telugu
-- [ ] Currency note recognition
-- [ ] Face and "who is this" for people the user chooses to enrol (opt-in, local only)
-- [ ] Phone app front end
+- [ ] **20 to 30 hand-labelled real photographs** (Hindi signboards, low light): the only way accuracy numbers can mean anything
+- [ ] **Five or more Hindi command recordings** in the benchmark to fill the missing speech-recognition row
+- [ ] **A screen-reader pass** over the dashboard (NVDA, VoiceOver)
+- [ ] **A browser-camera mode** for the hosted demo, so a visitor can try it with their own camera, with consent
+- [ ] **Audio beeps whose pitch rises as objects get closer**, a classic assistive pattern that needs no language
+- [ ] **A spoken wake word and voice-activity detection**, removing the need for any button
+- [ ] **A typed settings class** with start-up validation
+- [ ] **A trial with real users**, with their consent and guidance from an accessibility organisation
+- [ ] More Indian languages, and Hindi OCR language data for offline Devanagari signs
 
 ## Contributing
 
@@ -446,6 +515,10 @@ Contributions are very welcome, especially from blind and low-vision users, Hind
 - Step, kerb and glass-door detection
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Run `make test` and `make lint` before opening a pull request.
+
+## About the author
+
+Built by **Akash Nagar** ([@techakash32](https://github.com/techakash32)), a student-built research prototype. The code, tests and text were developed with the assistance of Claude, an AI assistant made by Anthropic; the author directed the work, ran it on his own machine and is responsible for the result. Issues, corrections and real labelled test photographs are very welcome.
 
 ## Citation
 

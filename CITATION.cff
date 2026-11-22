@@ -3,7 +3,9 @@ message: "If you use VisionAssist in research or a project, please cite it."
 title: "VisionAssist: Offline-first Hindi AI vision assistant for blind and visually impaired people"
 type: software
 authors:
-  - alias: "techakash32"
+  - family-names: "Nagar"
+    given-names: "Akash"
+    alias: "techakash32"
 repository-code: "https://github.com/techakash32/Hindi-multimodal-vision-assistant"
 license: MIT
 version: "1.0.0"
