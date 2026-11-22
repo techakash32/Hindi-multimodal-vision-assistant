@@ -1,5 +1,6 @@
 # Light set for CI and the demo: no torch, no audio hardware.
 numpy>=1.26
+pillow>=10.0
 opencv-python-headless>=4.9
 requests>=2.31
 python-dotenv>=1.0

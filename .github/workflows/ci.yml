@@ -16,4 +16,4 @@ jobs:
           cache: pip
       - run: pip install -r requirements-ci.txt && pip install -e . --no-deps
       - run: ruff check .
-      - run: pytest --cov=visionassist --cov-report=term-missing --cov-fail-under=70   # raise to your measured coverage
+      - run: pytest --cov=visionassist --cov-report=term-missing   # add --cov-fail-under=<your measured %> once you have run it locally

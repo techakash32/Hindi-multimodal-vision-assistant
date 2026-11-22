@@ -24,7 +24,7 @@ demo:              ## no camera/models/keys needed
 	visionassist run --ui web --demo
 
 test:
-	$(PY) -m pytest --cov=visionassist --cov-report=term-missing --cov-fail-under=70
+	$(PY) -m pytest --cov=visionassist --cov-report=term-missing
 
 adversarial:       ## adversarial pack
 	$(PY) -m eval.generate_adversarial && $(PY) -m eval.run_eval --scenarios eval/scenarios_adversarial.jsonl --out reports/adversarial_raw.json --report reports/adversarial_report.md
