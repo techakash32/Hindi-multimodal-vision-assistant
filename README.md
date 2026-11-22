@@ -307,6 +307,8 @@ Latest run (sandbox: Tesseract OCR, demo colour-blob detector, template stand-in
 
 **Abstention accuracy: 10/10** on the negative scenarios (5/5 on the holdout half never used for tuning). On a 20-case adversarial pack (blur, low light, noise, occlusion) the guardrails behaved as intended in 19 cases and abstained on all 10 severe ones; with guardrails off the same set produced 7 failures.
 
+**Which report to trust:** the table above is `reports/eval_report.md`, re-run and reproduced on 2026-11-22. A second report from the author's laptop used a scripted fake OCR and stand-ins, so it is marked "do not quote". See [reports/README.md](reports/README.md) for what each report measured. No 80-scenario run with real YOLO, real OCR and a real VLM has been made yet.
+
 > **Read this before quoting any number.** These results use synthetic images and small n (8 to 20 per row). No live camera, real Hindi speech, real Piper audio or live VLM was used. They show the pipeline and guardrails work as designed, **not real-world accuracy**. Details in [`reports/eval_report.md`](reports/eval_report.md).
 
 Reproduce everything without a camera, models or keys:

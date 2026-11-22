@@ -1,5 +1,19 @@
 # VisionAssist evaluation report
 
+> **Correction (read first).** This run was made on the author's Windows laptop **without real components**:
+> OCR was a **scripted fake** (Tesseract was not installed there), the detector was the demo colour-blob model, the
+> VLM was a deterministic template, and ASR was not exercised (see the header). Therefore:
+>
+> - The **OCR 1.00 / CER 0.00** rows are an artefact of the fake and are **not a measurement**. Do not quote them.
+> - **"9 of 80 not fully correct"** is the result for stand-ins, **not** for real YOLO, a real VLM or real OCR.
+> - The **Latency section below was measured on a 2-core Linux sandbox (Xeon, no GPU)**, not on the laptop. The
+>   laptop latency, with real YOLOv8n and real cloud services, is in [`latency_2026-11-22.md`](latency_2026-11-22.md).
+> - The reference run to quote for the 80-scenario evaluation (real Tesseract, stand-in detector and VLM) is
+>   [`eval_report.md`](eval_report.md). It was re-run on 2026-11-22 at commit `82bc72b` and reproduced exactly
+>   (17 of 80 not fully correct, 0 unclassified).
+> - No run of all 80 scenarios with real YOLO, real OCR and a real VLM has been made yet.
+
+
 - **Date:** 2026-11-22 14:34 UTC+0530
 - **Commit:** n/a (not a git checkout)
 - **Host:** Intel64 Family 6 Model 154 Stepping 3, GenuineIntel (12 cores), GPU: NVIDIA GeForce RTX 2050, Windows-10-10.0.26300-SP0
