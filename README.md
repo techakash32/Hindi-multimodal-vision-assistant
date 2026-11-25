@@ -14,6 +14,9 @@ A webcam watches the scene. VisionAssist speaks short, prioritised alerts in Hin
 ![Offline first](https://img.shields.io/badge/safety%20alerts-100%25%20offline-brightgreen)
 ![Language](https://img.shields.io/badge/voice-Hindi%20(हिंदी)-orange)
 [![Stars](https://img.shields.io/github/stars/techakash32/Hindi-multimodal-vision-assistant?style=social)](https://github.com/techakash32/Hindi-multimodal-vision-assistant/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/techakash32/Hindi-multimodal-vision-assistant)](https://github.com/techakash32/Hindi-multimodal-vision-assistant/commits/main)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/techakash32/Hindi-multimodal-vision-assistant)](https://github.com/techakash32/Hindi-multimodal-vision-assistant/graphs/commit-activity)
+[![Issues](https://img.shields.io/github/issues/techakash32/Hindi-multimodal-vision-assistant)](https://github.com/techakash32/Hindi-multimodal-vision-assistant/issues)
 
 [**▶ Live demo**](https://visionassist-demo.onrender.com) ·
 [**📖 Read the book (PDF)**](docs/VisionAssist-Book.pdf) ·
@@ -491,6 +494,20 @@ Most of what the tests missed was found in the first hour of real use. A few exa
 | First CI run failed | The light dependency list lacked an image library | Added to both requirements files |
 
 The main lessons: run it the way a user does, treat free services as a failure mode rather than a dependency, and measure before claiming.
+
+## Build in public: daily progress
+
+This project is actively developed, with small, real changes shipped often. The badges at the top update automatically from the commit history.
+
+- **Latest entries:** [docs/DEVLOG.md](docs/DEVLOG.md), a short "did / learned / next" note for each working day.
+- **Every change:** the [commit history](https://github.com/techakash32/Hindi-multimodal-vision-assistant/commits/main) and the [changelog](CHANGELOG.md).
+- **What is next:** the [roadmap](#roadmap) below. Pick one and open an issue to follow along.
+
+| Latest | What happened |
+| --- | --- |
+| 2026-11-22 | Live demo deployed, README and docs rewritten, evaluation report mismatch fixed |
+
+**Star or watch the repository** (top right, Watch > Custom > Releases) to follow the daily updates.
 
 ## Roadmap
 

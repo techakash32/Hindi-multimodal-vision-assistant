@@ -17,4 +17,5 @@ Key facts:
 - [Local setup](docs/SETUP_LOCAL.md): Windows, macOS, Linux, Docker
 - [Architecture decisions](docs/adr/README.md)
 - [Evaluation report](reports/eval_report.md)
+- [Dev log](docs/DEVLOG.md): day-by-day progress
 - [Contributing](CONTRIBUTING.md)
